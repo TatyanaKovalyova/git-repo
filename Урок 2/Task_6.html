@@ -1,0 +1,35 @@
+<meta charset = "utf-8">
+<script type = "text/javascript">
+
+var arg1 = -4;
+var arg2 = 6;
+var operation;
+
+
+function mathOperation(arg1, arg2, operation) {
+  if (arg1 >= 0 && arg2 >= 0) {
+  operation = "Разность чисел равна ";	
+  return operation + (arg1 - arg2);
+  } else if (arg1 < 0 && arg2 < 0) {
+	operation = "Произведение чисел равно ";
+	return operation + (arg1 * arg2);
+  } else if ((arg1 < 0 && arg2 >= 0) || (arg1 >= 0 && arg2 < 0)) {
+	operation = "Сумма чисел равна ";
+	return operation + (arg1 + arg2);
+  }
+
+}
+alert (mathOperation(arg1, arg2, operation));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
