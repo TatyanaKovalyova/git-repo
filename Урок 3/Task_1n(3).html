@@ -1,0 +1,21 @@
+<meta charset = "utf-8">
+<script type = "text/javascript">
+
+var n = 100;
+var i = 2;
+
+function getPrimeNumber(n) {
+	for (var i = 2; i < n; i++) {
+		if (n % i === 0)
+		return false;
+    }
+    return true;
+}
+
+while (i < n) {
+    if (getPrimeNumber(i)) 
+    	console.log(i);
+    i++;
+}
+
+</script>
