@@ -1,0 +1,36 @@
+<meta charset = "utf-8">
+<script type = "text/javascript">
+
+var num;
+var sharenum = {
+	units: 0,
+	tens: 0,
+	hundreds: 0
+};
+
+function getShareNum (num) {
+	if (num >= 0 && num < 10) {
+	  sharenum.units = num;
+      return sharenum;
+	} else if (num >= 10 && num < 100) {
+		sharenum.units = num % 10;
+		sharenum.tens = parseInt(num / 10);
+		return sharenum;
+	} else if (num >= 100 && num < 1000) {
+		sharenum.units = num % 10;
+	    sharenum.tens = parseInt((num - parseInt(num / 100) * 100) / 10);
+		sharenum.hundreds = parseInt(num / 100);
+		return sharenum;
+	} else {
+		console.log("Вы ввели число, которое больше 999");
+		delete sharenum.units;
+	    delete sharenum.tens;
+		delete sharenum.hundreds;
+		return sharenum;
+	}
+
+}
+ 
+console.log(getShareNum(1008));
+
+</script>
