@@ -1,0 +1,20 @@
+<meta charset = "utf-8">
+<script type = "text/javascript">
+
+var cart = [
+    ["Item1", 4, 100],
+    ["Item2", 2, 300],
+    ["Item3", 3, 400]
+]
+
+function countBasketPrice() {
+    var sum = 0;
+    for (var i = 0; i < cart.length; i++) {
+        sum += cart[i][1]*cart[i][2];
+    }
+    return sum;
+}
+
+console.log(countBasketPrice());
+
+</script>
